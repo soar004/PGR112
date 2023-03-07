@@ -8,7 +8,7 @@ public class Methods
      * Returner summen av alle tallene gitt som parametere
      */
     public int addTwoNumbers(int x, int y) {
-        return 0;
+        return x + y;
     }
 
     /**
