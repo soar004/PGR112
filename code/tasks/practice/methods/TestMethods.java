@@ -30,6 +30,12 @@ public class TestMethods
         System.setOut(this.stdout);
     }
 
+    /** Local helper method */
+    private String getOutputString() {
+        return this.output.toString().replaceAll("\\p{Cntrl}", "");
+    }
+
+
     @Test
     @DisplayName("addTwoNumbers: Legge sammen 2 ulike tall gitt som parametere")
     public void testAddTwoNumbers() {
@@ -66,7 +72,7 @@ public class TestMethods
 
         methods.printStringParameter(text);
 
-        assertEquals(text, this.output.toString().trim());
+        assertEquals(text, this.getOutputString());
     }
 
     @Test
@@ -82,20 +88,20 @@ public class TestMethods
 
         methods.printStringsFromArrayList(lines);
 
-        assertEquals("Programmeringtartidåmestre", this.output.toString().replaceAll("\\p{Cntrl}", ""));
+        assertEquals("Programmeringtartidåmestre", this.getOutputString());
     }
 
     @Test
     @DisplayName("printCourseName: Print ut navnet til et emne gitt en emnekode")
     public void testPrintCourseName() {
         methods.printCourseName("PGR112");
-        assertEquals("Objektorientert programmering", this.output.toString().trim());
+        assertEquals("Objektorientert programmering", this.getOutputString());
 
         methods.printCourseName("TK2100");
-        assertEquals("Informasjonssikkerhet", this.output.toString().trim());
+        assertEquals("Informasjonssikkerhet", this.getOutputString());
 
         methods.printCourseName("PGR110");
-        assertEquals("Visual Analytics", this.output.toString().trim());
+        assertEquals("Visual Analytics", this.getOutputString());
     }
 
     @Test
