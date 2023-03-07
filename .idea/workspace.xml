@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="Update .gitignore file">
+    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="Update wallet test handle modifier reflection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/solutions/_08/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/_08/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/solutions/_09/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/_09/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/solutions/_09/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/_09/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/solutions/large01/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/large01/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/tasks/extra/wallet/TestWallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/tasks/extra/wallet/TestWallet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/tasks/practice/methods/TestMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/tasks/practice/methods/TestMethods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +151,7 @@
       <workItem from="1678020698119" duration="2707000" />
       <workItem from="1678046593799" duration="3940000" />
       <workItem from="1678154298914" duration="21314000" />
-      <workItem from="1678175679396" duration="8324000" />
+      <workItem from="1678175679396" duration="9214000" />
     </task>
     <task id="LOCAL−00001" summary="Initial commit with initial structure">
       <created>1678174938053</created>
@@ -182,7 +177,31 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1678178898601</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Update solution 08 to use getter-method">
+      <created>1678185781524</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1678185781524</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Added DEBUG mode to toggle terminal log msgs">
+      <created>1678185834926</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1678185834926</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Added helper method to uniformly catch stdout">
+      <created>1678185888625</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1678185888625</updated>
+    </task>
+    <task id="LOCAL−00008" summary="Update wallet test handle modifier reflection">
+      <created>1678185946106</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1678185946106</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +212,11 @@
     <MESSAGE value="Added ignored template code" />
     <MESSAGE value="Update methods exercise" />
     <MESSAGE value="Update .gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore file" />
+    <MESSAGE value="Update solution 08 to use getter-method" />
+    <MESSAGE value="Added DEBUG mode to toggle terminal log msgs" />
+    <MESSAGE value="Added helper method to uniformly catch stdout" />
+    <MESSAGE value="Update wallet test handle modifier reflection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update wallet test handle modifier reflection" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

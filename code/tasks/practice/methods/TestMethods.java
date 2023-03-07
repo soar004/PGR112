@@ -96,12 +96,15 @@ public class TestMethods
     public void testPrintCourseName() {
         methods.printCourseName("PGR112");
         assertEquals("Objektorientert programmering", this.getOutputString());
+        this.output.reset();
 
         methods.printCourseName("TK2100");
         assertEquals("Informasjonssikkerhet", this.getOutputString());
+        this.output.reset();
 
         methods.printCourseName("PGR110");
         assertEquals("Visual Analytics", this.getOutputString());
+        this.output.reset();
     }
 
     @Test
