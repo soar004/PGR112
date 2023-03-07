@@ -4,47 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/PGR112.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/examples/java/ArrayOneDimensional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/examples/java/ArrayTwoDimensional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/examples/java/ExampleArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/examples/java/ExampleHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/examples/java/ExampleHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/examples/java/NumberClasses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_05/InteractiveTerminal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_05/Questions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_05/TerminalPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_06/AskQuestionsAndSaveAnswers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_06/Composer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_06/ComposerAlternative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_06/NumbersAddedTogether.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_08/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_08/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_08/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_08/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_09/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_09/Movable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_09/MovablePoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_09/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_09/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_09/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/_09/TestShapes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/large01/Terminal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/solutions/large01/_01/MiniBank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/tasks/_03/TestTask3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/tasks/extra/wallet/TestWallet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/tasks/practice/methods/TestMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/task06/composers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/task06/tall.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/tasks/extra/wallet/src/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/tasks/extra/wallet/src/Wallet.java" afterDir="false" />
+    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="Initial commit with initial structure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +38,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\progr\IdeaProjects\PGR112-23V\files\task06" />
@@ -170,12 +150,23 @@
       <workItem from="1677863274939" duration="12326000" />
       <workItem from="1678020698119" duration="2707000" />
       <workItem from="1678046593799" duration="3940000" />
-      <workItem from="1678154298914" duration="20267000" />
+      <workItem from="1678154298914" duration="21314000" />
     </task>
+    <task id="LOCAL−00001" summary="Initial commit with initial structure">
+      <created>1678174938053</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1678174938053</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit with initial structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit with initial structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
