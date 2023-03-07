@@ -129,7 +129,7 @@ public abstract class Shape
         HashMap<Integer, Shape> shapesMap = new HashMap<>();
 
         for (Shape shape : shapesList) {
-            shapesMap.put(shape.id, shape);
+            shapesMap.put(shape.getId(), shape);
 
             // getId() kan også brukes istedenfor id-feltet direkte
             // shapesMap.put(shape.getId(), shape);
