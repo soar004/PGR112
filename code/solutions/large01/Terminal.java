@@ -10,6 +10,8 @@ public class Terminal
 {
     private static final Scanner input = new Scanner(System.in);
 
+    private static final boolean DEBUG = true;
+
     /**
      * Privat konstruktør da vi ikke ønsker flere instanser av en terminal
      */
@@ -25,7 +27,9 @@ public class Terminal
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
 
-        System.out.printf("[%s][%s][%s]: %s%n", date, time, context, message);
+        if (Terminal.DEBUG) {
+            System.out.printf("[%s][%s][%s]: %s%n", date, time, context, message);
+        }
     }
 
     /**
@@ -44,10 +48,10 @@ public class Terminal
     }
 
     /**
-     * Printer ut en meny og returnerer hvilket valg som et tall
      *
      * @param menu Navnet på menyen
-     * @param options En ArrayList med valgmuligheter av typen String
+     * @param options Et ArrayList med de ulike valgmulighetene
+     * @return Returner tallverdi for hvilket valg brukeren tok
      */
     public static int printMenuAndReturnChoice(String menu, ArrayList<String> options) {
         Terminal.printMenu(menu, options);
