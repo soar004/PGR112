@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="Added ignored template code">
+    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="Update methods exercise">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/tasks/practice/methods/src/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/tasks/practice/methods/src/Methods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <recent name="C:\Users\progr\IdeaProjects\PGR112-23V\files" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PGR112">
+  <component name="RunManager" selected="Application.Oppgave1">
     <configuration name="Composer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="solutions._06.Composer" />
       <module name="PGR112-23V" />
@@ -91,6 +91,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Oppgave1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mada051.oppgaver.Oppgave1" />
+      <module name="PGR112-23V" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mada051.oppgaver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PGR112" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PGR112" />
       <module name="PGR112-23V" />
@@ -98,44 +111,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestWallet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PGR112-23V" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tasks.practice.methods.*" />
+          <option name="PATTERN" value="tasks.extra.wallet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tasks.practice.methods" />
-      <option name="MAIN_CLASS_NAME" value="tasks.practice.methods.TestMethods" />
+      <option name="PACKAGE_NAME" value="tasks.extra.wallet" />
+      <option name="MAIN_CLASS_NAME" value="tasks.extra.wallet.TestWallet" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMethods.testPrintStringParameter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PGR112-23V" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tasks.practice.methods.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tasks.practice.methods" />
-      <option name="MAIN_CLASS_NAME" value="tasks.practice.methods.TestMethods" />
-      <option name="METHOD_NAME" value="testPrintStringParameter" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Oppgave1" />
+        <item itemvalue="JUnit.TestWallet" />
         <item itemvalue="Application.PGR112" />
         <item itemvalue="Application.NumbersAddedTogether" />
         <item itemvalue="Application.Composer" />
-        <item itemvalue="JUnit.TestMethods" />
-        <item itemvalue="JUnit.TestMethods.testPrintStringParameter" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +149,7 @@
       <workItem from="1678020698119" duration="2707000" />
       <workItem from="1678046593799" duration="3940000" />
       <workItem from="1678154298914" duration="21314000" />
-      <workItem from="1678175679396" duration="1914000" />
+      <workItem from="1678175679396" duration="2339000" />
     </task>
     <task id="LOCAL−00001" summary="Initial commit with initial structure">
       <created>1678174938053</created>
@@ -166,7 +163,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1678175764189</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Update methods exercise">
+      <created>1678178475616</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1678178475616</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +178,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit with initial structure" />
     <MESSAGE value="Added ignored template code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ignored template code" />
+    <MESSAGE value="Update methods exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update methods exercise" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

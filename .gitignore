@@ -2,7 +2,7 @@
 code/**/code/**/*
 code/**/src/**/*
 student/**/*
-!student/**/public/**/*
+!student/**/shared/**/*
 !student/README.md
 
 ### Output and Mavens ###
