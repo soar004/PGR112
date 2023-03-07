@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="Update methods exercise">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="59553d22-9f4f-462f-918a-f7f539850195" name="Changes" comment="Update .gitignore file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/solutions/_08/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/_08/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/solutions/_09/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/_09/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/solutions/_09/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/_09/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/solutions/large01/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/solutions/large01/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/tasks/extra/wallet/TestWallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/tasks/extra/wallet/TestWallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/tasks/practice/methods/TestMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/tasks/practice/methods/TestMethods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,26 +69,13 @@
       <recent name="C:\Users\progr\IdeaProjects\PGR112-23V\files" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Oppgave1">
-    <configuration name="Composer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="solutions._06.Composer" />
+  <component name="RunManager" selected="JUnit.TestWallet">
+    <configuration name="MiniBank" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="solutions.large01._01.MiniBank" />
       <module name="PGR112-23V" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="solutions._06.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NumbersAddedTogether" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="solutions._06.NumbersAddedTogether" />
-      <module name="PGR112-23V" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="solutions._06.*" />
+          <option name="PATTERN" value="solutions.large01._01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,6 +103,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PGR112-23V" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tasks.practice.methods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tasks.practice.methods" />
+      <option name="MAIN_CLASS_NAME" value="tasks.practice.methods.TestMethods" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestWallet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PGR112-23V" />
       <extension name="coverage">
@@ -128,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Oppgave1" />
         <item itemvalue="JUnit.TestWallet" />
+        <item itemvalue="JUnit.TestMethods" />
+        <item itemvalue="Application.MiniBank" />
+        <item itemvalue="Application.Oppgave1" />
         <item itemvalue="Application.PGR112" />
-        <item itemvalue="Application.NumbersAddedTogether" />
-        <item itemvalue="Application.Composer" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +156,7 @@
       <workItem from="1678020698119" duration="2707000" />
       <workItem from="1678046593799" duration="3940000" />
       <workItem from="1678154298914" duration="21314000" />
-      <workItem from="1678175679396" duration="2339000" />
+      <workItem from="1678175679396" duration="8324000" />
     </task>
     <task id="LOCAL−00001" summary="Initial commit with initial structure">
       <created>1678174938053</created>
@@ -169,7 +176,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1678178475616</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Update .gitignore file">
+      <created>1678178898601</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1678178898601</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +192,8 @@
     <MESSAGE value="Initial commit with initial structure" />
     <MESSAGE value="Added ignored template code" />
     <MESSAGE value="Update methods exercise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update methods exercise" />
+    <MESSAGE value="Update .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
