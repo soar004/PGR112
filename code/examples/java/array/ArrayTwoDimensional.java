@@ -1,4 +1,4 @@
-package examples.java;
+package examples.java.array;
 
 public class ArrayTwoDimensional {
     public static void main(String[] args) {
