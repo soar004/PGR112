@@ -30,11 +30,11 @@ public class Waffle
     }
 
     //# Setter-methods
-    private void setGlutenFree(boolean value) {
+    void setGlutenFree(boolean value) {
         this.glutenFree = value;
     }
 
-    private void setLactoseFree(boolean value) {
+    void setLactoseFree(boolean value) {
         this.lactoseFree = value;
     }
 

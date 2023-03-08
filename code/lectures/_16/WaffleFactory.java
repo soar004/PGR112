@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class WaffleFactory {
 
-    private final static HashMap<String, WaffleTopping> waffleToppings = new HashMap<>();
+    final static HashMap<String, WaffleTopping> waffleToppings = new HashMap<>();
 
     static {
         String[] toppings = new String[] {
@@ -37,6 +37,16 @@ public class WaffleFactory {
         ArrayList<WaffleTopping> toppings = new ArrayList<>();
 
         toppings.add(waffleToppings.get("Pølse"));
+
+        return new Waffle(gluten, lactose, toppings);
+    }
+
+    public static Waffle createWaffleWithStrawberryJamSugarAndBrownCheese(boolean gluten, boolean lactose) {
+        ArrayList<WaffleTopping> toppings = new ArrayList<>();
+
+        toppings.add(waffleToppings.get("Jordbærsyltetøy"));
+        toppings.add(waffleToppings.get("Sukker"));
+        toppings.add(waffleToppings.get("Brunost"));
 
         return new Waffle(gluten, lactose, toppings);
     }
