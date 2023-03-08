@@ -45,10 +45,16 @@ public class Waffle
     //# Methods
     @Override
     public String toString() {
-        return "Waffle[gluten=%s; lactose=%s; toppings=%s;]".formatted(
+        StringBuilder toppings = new StringBuilder();
+
+        for (WaffleTopping topping : this.getToppings()) {
+            toppings.append(topping.getName()).append(";");
+        }
+
+        return "Waffle[gluten=%s; lactose=%s; toppings=\"%s\"]".formatted(
                 this.isGlutenFree(),
                 this.isLactoseFree(),
-                this.getToppings()
+                toppings
         );
     }
 }

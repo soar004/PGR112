@@ -16,7 +16,8 @@ public class WaffleFactory {
                 "Ananas",
                 "Smør",
                 "Cottage Cheese",
-                "Pølse"
+                "Pølse",
+                "Sukker"
         };
 
         for (String topping : toppings) {
