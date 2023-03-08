@@ -32,6 +32,9 @@ public class GarbageCollection
          */
         personOne = personTwo;
 
+        personOne.setName("Charlie");
+
+        System.out.println(personTwo.getName());
     }
 
     public static void main(String args[]) {
@@ -48,7 +51,7 @@ public class GarbageCollection
             GarbageCollection GC = new GarbageCollection(id);
             Cleaner.Cleanable cleanUp = cleaner.register(GC, new CleanUp(GC.getName()));
 
-             cleanUp.clean();
+            // cleanUp.clean();
         }
 
         System.out.println("Gjør noe intensivt med tanke på minnebruk ...");
