@@ -17,8 +17,8 @@ Med denne klassen, så skal du opprette følgende:
 
 Som da skal opprette objekt instanser av denne klassen som du har valgt ut.
 
-Opprett en `JavaProgram`-klasse for å teste ut både Factory og Builder med eksempler hvor du viser fram hvordan disse brukes.
+Opprett en `JavaProgram`-klasse med en main-metode for å teste ut både Factory og Builder med eksempler hvor du viser fram hvordan disse brukes.
 
-Bruk `tasks._16/src`-mappen for å inneholde denne koden.
-Bruk gjerne `student/DITT-BRUKERNAVN/`-mappen for å teste ut løsninger og spesifikke problemer som skulle oppstå.
+Bruk `tasks/_16/src`-mappen for å inneholde denne koden.
+Bruk gjerne `student/DITT-BRUKERNAVN/`-mappen for å teste ut løsninger og spesifikke problemer som skulle oppstå underveis.
 
