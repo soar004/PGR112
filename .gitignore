@@ -1,6 +1,8 @@
 ### Kristiania PGR112 ###
 code/**/code/**/*
 code/**/src/**/*
+files/example/**/*
+!files/example/.placeholder
 student/**/*
 !student/**/shared/**/*
 !student/README.md
