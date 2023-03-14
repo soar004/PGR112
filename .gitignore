@@ -1,6 +1,8 @@
 ### Kristiania PGR112 ###
 code/**/code/**/*
 code/**/src/**/*
+code/canvas/sandbox/**/*
+!code/canvas/sandbox/Example.java
 files/example/**/*
 !files/example/.placeholder
 files/local/**/*
