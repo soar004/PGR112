@@ -176,7 +176,7 @@ public class API {
     }
 
     public void drawRectangle(Rectangle r) {
-        this.drawRectangle(new Point(r.x, r.y), new Dimension(r.width, r.height), Anchor.CENTER);
+        this.drawRectangle(new Point(r.x, r.y), new Dimension(r.width, r.height), Anchor.TOP_LEFT);
     }
 
     public void drawRectangle(Point point, Dimension size) {
@@ -188,7 +188,7 @@ public class API {
     }
 
     public void drawRectangle(int x, int y, int w, int h) {
-        this.drawRectangle(new Point(x, y), new Dimension(w, h), Anchor.CENTER);
+        this.drawRectangle(new Point(x, y), new Dimension(w, h), Anchor.TOP_LEFT);
     }
 
     public void drawRectangle(Point point, Dimension size, Anchor anchor) {
