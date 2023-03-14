@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>kristiania.pgr112.23v</groupId>
-    <artifactId>PGR112-23V</artifactId>
+    <artifactId>PGR112</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
