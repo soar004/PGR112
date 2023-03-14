@@ -27,6 +27,9 @@ target/
 *.iml
 *.ipr
 
+### Project-specific for IntellJ ###
+!PGR112-23V.iml
+
 ### Eclipse ###
 .apt_generated
 .classpath
