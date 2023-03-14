@@ -8,6 +8,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class API {
@@ -99,6 +100,227 @@ public class API {
         shape.draw(this.getGraphics(), this.fillMode);
     }
 
+    //# COLOR
+    public void setColor(Color color) {
+        this.graphics.setColor(color);
+    }
+
+    public void clearColor() {
+        this.graphics.setColor(API.defaultTextColor);
+    }
+
+    public void setBackgroundColor(Color color) {
+        API.defaultBackgroundColor = color;
+    }
+
+    //# SHAPES
+    public void drawTriangle(int... coordinates) {
+        assert coordinates.length == 6;
+
+        ArrayList<Point> points = new ArrayList<>();
+
+        points.add(new Point(coordinates[0], coordinates[1]));
+        points.add(new Point(coordinates[2], coordinates[3]));
+        points.add(new Point(coordinates[4], coordinates[5]));
+
+        this.drawTriangle(points);
+    }
+
+    public void drawTriangle(ArrayList<? extends Point> points) {
+        if (this.isFillMode()) {
+            this.graphics.drawPolygon(
+                    new int[] {
+                            points.get(0).x,
+                            points.get(1).x,
+                            points.get(2).x,
+                            points.get(0).x
+                    },
+                    new int[] {
+                            points.get(0).y,
+                            points.get(1).y,
+                            points.get(2).y,
+                            points.get(0).y
+                    },
+                    4
+            );
+        }
+        else {
+            this.graphics.drawPolyline(
+                    new int[]{
+                            points.get(0).x,
+                            points.get(1).x,
+                            points.get(2).x,
+                            points.get(0).x
+                    },
+                    new int[]{
+                            points.get(0).y,
+                            points.get(1).y,
+                            points.get(2).y,
+                            points.get(0).y
+                    },
+                    4
+            );
+        }
+    }
+
+    public void drawSquare(Point point, int size, Anchor anchor) {
+        this.drawRectangle(point, new Dimension(size, size), anchor);
+    }
+
+    public void drawSquare(Point point, int size) {
+        this.drawRectangle(point, new Dimension(size, size));
+    }
+
+    public void drawRectangle(Rectangle r, Anchor anchor) {
+        this.drawRectangle(new Point(r.x, r.y), new Dimension(r.width, r.height), anchor);
+    }
+
+    public void drawRectangle(Rectangle r) {
+        this.drawRectangle(new Point(r.x, r.y), new Dimension(r.width, r.height), Anchor.CENTER);
+    }
+
+    public void drawRectangle(Point point, Dimension size) {
+        this.drawRectangle(point, size, Anchor.CENTER);
+    }
+
+    public void drawRectangle(Point point, int w, int h) {
+        this.drawRectangle(point, new Dimension(w, h));
+    }
+
+    public void drawRectangle(int x, int y, int w, int h) {
+        this.drawRectangle(new Point(x, y), new Dimension(w, h), Anchor.CENTER);
+    }
+
+    public void drawRectangle(Point point, Dimension size, Anchor anchor) {
+        float[] transform = Anchor.transform(anchor);
+
+        if (this.isFillMode()) {
+            this.graphics.fillRect(
+                    (int)(point.x - (size.width*transform[0])),
+                    (int)(point.y - (size.height*transform[1])),
+                    size.width,
+                    size.height
+            );
+        }
+        else {
+            this.graphics.drawRect(
+                    (int)(point.x - (size.width*transform[0])),
+                    (int)(point.y - (size.height*transform[1])),
+                    size.width,
+                    size.height
+            );
+        }
+    }
+
+    public void drawCross(int x, int y, float r) {
+        this.drawCross(new Point(x, y), r);
+    }
+
+    public void drawCross(Point p, float r) {
+        this.drawCross(p, r, Anchor.CENTER);
+    }
+
+    public void drawCross(Point p, float r, Anchor anchor) {
+        double angle = Math.PI/4.0d;
+
+        this.drawLine(
+                p.x - (int)(Math.cos(angle)*r),
+                p.y - (int)(Math.sin(angle)*r),
+
+                p.x - (int)(Math.cos(angle + Math.PI)*r),
+                p.y - (int)(Math.sin(angle + Math.PI)*r)
+        );
+
+        this.drawLine(
+                p.x - (int)(Math.cos(angle + Math.PI/2)*r),
+                p.y - (int)(Math.sin(angle + Math.PI/2)*r),
+
+                p.x - (int)(Math.cos(angle - Math.PI/2)*r),
+                p.y - (int)(Math.sin(angle - Math.PI/2)*r)
+        );
+    }
+
+
+    public void drawCircle(int x, int y, float r) {
+        this.drawCircle(new Point(x, y), r);
+    }
+
+    public void drawCircle(Point p, float r) {
+        this.drawCircle(p, r, Anchor.CENTER);
+    }
+
+    public void drawCircle(Point p, float r, Anchor anchor) {
+        float[] transform = Anchor.transform(anchor);
+
+        if (this.isFillMode()) {
+            this.graphics.fillOval(
+                    (int)(p.x - ((r*2)*transform[0])),
+                    (int)(p.y - ((r*2)*transform[1])),
+                    (int)(r * 2),
+                    (int)(r * 2)
+            );
+        }
+        else {
+            this.graphics.drawOval(
+                    (int)(p.x - ((r*2)*transform[0])),
+                    (int)(p.y - ((r*2)*transform[1])),
+                    (int)(r * 2),
+                    (int)(r * 2)
+            );
+        }
+    }
+
+    private boolean isFillMode() {
+        return this.fillMode;
+    }
+
+    public void drawLine(int startX, int startY, int endX, int endY) {
+        this.drawLine(new Point(startX, startY), new Point(endX, endY));
+    }
+
+    public void drawLine(float startX, float startY, float endX, float endY) {
+        this.drawLine(
+                (int)(this.getWidth()*startX),
+                (int)(this.getHeight()*startY),
+                (int)(this.getWidth()*endX),
+                (int)(this.getHeight()*endY)
+        );
+    }
+
+    public void drawLine(java.awt.Point start, java.awt.Point end) {
+        this.graphics.drawLine(
+                start.x,
+                start.y,
+                end.x,
+                end.y
+        );
+    }
+
+
+    public void drawArrow(int startX, int startY, int endX, int endY) {
+        this.drawArrow(new Point(startX, startY), new Point(endX, endY));
+    }
+
+    public void drawArrow(Point start, Point end) {
+        this.drawLine(start, end);
+
+        float angle = this.getAngle(end, start);
+        ArrayList<Point> triangle = new ArrayList<>();
+
+        triangle.add(end);
+        triangle.add(new Point(
+                (int)(end.x - Math.cos(angle + Math.PI/4.0d)*16),
+                (int)(end.y - Math.sin(angle + Math.PI/4.0d)*16)
+        ));
+        triangle.add(new Point(
+                (int)(end.x - Math.cos(angle - Math.PI/4.0d)*16),
+                (int)(end.y - Math.sin(angle - Math.PI/4.0d)*16)
+        ));
+
+        this.setFillMode();
+        this.drawTriangle(triangle);
+        this.clearFillMode();
+    }
 
     public BufferedImage getImage(String fileName) {
         if (!images.data.containsKey(fileName)) {
@@ -127,8 +349,6 @@ public class API {
 
         int offsetX = (int)(part.width  * scale[0]);
         int offsetY = (int)(part.height * scale[1]);
-
-        System.out.println(part);
 
         this.graphics.drawImage(
                 image,
@@ -234,6 +454,10 @@ public class API {
         this.drawText(API.defaultFont, text, x, y);
     }
 
+    //# Helper methods
+    public float getAngle(java.awt.Point A, java.awt.Point B) {
+        return (float) Math.atan2(A.y - B.y, A.x - B.x);
+    }
 
     //-------------------------------------------------------------------------
     //# Cache
