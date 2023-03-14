@@ -3,6 +3,8 @@ code/**/code/**/*
 code/**/src/**/*
 files/example/**/*
 !files/example/.placeholder
+files/local/**/*
+!files/local/.placeholder
 student/**/*
 !student/**/shared/**/*
 !student/README.md
