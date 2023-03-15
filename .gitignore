@@ -23,6 +23,9 @@ target/
 .idea/compiler.xml
 .idea/workspace.xml
 .idea/libraries/
+.idea/dataSources/
+.idea/dataSources*.xml
+.idea/sqldialects.xml
 *.iws
 *.iml
 *.ipr
