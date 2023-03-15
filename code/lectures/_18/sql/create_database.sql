@@ -1,0 +1,5 @@
+CREATE DATABASE PGR112Lecture18;
+
+CREATE USER 'lecture18' IDENTIFIED BY 'password18';
+
+GRANT ALL on PGR112Lecture18.* TO 'lecture18';

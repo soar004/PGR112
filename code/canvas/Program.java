@@ -189,7 +189,6 @@ public class Program implements Runnable
 
         canvas.createBufferStrategy(2);
         this.buffer = canvas.getBufferStrategy();
-
         canvas.requestFocus();
 
         Program.log("Launcher", "Displaying GUI ...");
@@ -227,12 +226,15 @@ public class Program implements Runnable
         this.render(graphics);
 
         graphics.dispose();
+
         this.buffer.show();
     }
 
     private void render(Graphics2D graphics) {
         this.outerface.setGraphics(graphics);
 
+        graphics.setColor(this.outerface.getColor());
+        graphics.setBackground(this.outerface.getBackgroundColor());
         graphics.clearRect(
                 0,
                 0,
@@ -246,7 +248,13 @@ public class Program implements Runnable
     }
 
     public static void run(Plugin plugin) {
+        Program.run(plugin, Program.size.width, Program.size.height);
+    }
+
+    public static void run(Plugin plugin, int width, int height) {
         Program program = new Program(plugin);
+
+        Program.size = new Dimension(width, height);
 
         new Thread(program).start();
     }
