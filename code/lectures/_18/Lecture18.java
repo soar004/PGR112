@@ -47,15 +47,27 @@ public class Lecture18 {
                     + "PRIMARY KEY(id)"
             +")";
 
+            //# 4. Kjør uttrykket
             statement.execute(query);
 
-            System.out.println(query);
+            query = "SELECT * FROM users WHERE username = 'admin';";
+
+            if (statement.executeQuery(query).next()) {
+                System.out.println("Det eksisterer en admin bruker!");
+            }
+            else {
+                System.out.println("Det eksisterer ikke en admin bruker, la oss lage en!");
+
+                query = "INSERT INTO users(username, password) VALUES('admin', 'admin');";
+
+                statement.execute(query);
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
 
-        //# 4. Kjør uttrykket
+
 
         //# 5. Rydd opp etter oss
         try {
