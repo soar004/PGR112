@@ -2,10 +2,7 @@ package canvas.sandbox;
 
 import canvas.API;
 import canvas.Plugin;
-import canvas.library.geometry.Anchor;
-
-
-import java.awt.Color;
+import canvas.library.resource.Color;
 
 
 public class Example extends Plugin

@@ -3,35 +3,60 @@ package canvas;
 import canvas.library.geometry.Anchor;
 import canvas.library.geometry.Point;
 import canvas.library.geometry.Shape;
+import canvas.library.resource.Color;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Canvas;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class API {
+public class API
+{
     //# Fields
     private Frame window;
-    Canvas canvas;
     private Graphics2D graphics = null;
     private Cache<BufferedImage> images = new Cache<>();
 
+    Canvas canvas;
+
+    //# Static
     public static Font defaultFont = new Font(
             "Consolas",
             Font.PLAIN,
             24
     );
-    public static Color defaultTextColor = Color.BLACK;
-    public static Color defaultBackgroundColor = Color.WHITE;
+
+    public static java.awt.Color defaultColor = Color.BLACK;
+    public static java.awt.Color defaultBackgroundColor = Color.WHITE;
 
     public static void setDefaultFont(Font font) {
         API.defaultFont = font;
     }
 
-    public static void setDefaultTextColor(Color color) {
-        API.defaultTextColor = color;
+    public static void setDefaultColor(java.awt.Color color) {
+        API.defaultColor = color;
+    }
+
+    public static void setDefaultBackgroundColor(java.awt.Color color) {
+        API.defaultBackgroundColor = color;
+    }
+
+    private java.awt.Color currentColor = API.defaultColor;
+    private java.awt.Color currentBackgroundColor = API.defaultBackgroundColor;
+
+    public java.awt.Color getColor() {
+        return this.currentColor;
+    }
+
+    public java.awt.Color getBackgroundColor() {
+        return this.currentBackgroundColor;
     }
 
 
@@ -101,16 +126,20 @@ public class API {
     }
 
     //# COLOR
-    public void setColor(Color color) {
-        this.graphics.setColor(color);
+    public void setColor(java.awt.Color color) {
+        this.currentColor = color;
     }
 
     public void clearColor() {
-        this.graphics.setColor(API.defaultTextColor);
+        this.currentColor = API.defaultColor;
     }
 
-    public void setBackgroundColor(Color color) {
-        API.defaultBackgroundColor = color;
+    public void setBackgroundColor(java.awt.Color color) {
+        this.currentBackgroundColor = color;
+    }
+
+    public void clearBackgroundColor() {
+        this.currentBackgroundColor = API.defaultBackgroundColor;
     }
 
     //# SHAPES
@@ -287,7 +316,7 @@ public class API {
         );
     }
 
-    public void drawLine(java.awt.Point start, java.awt.Point end) {
+    public void drawLine(java.awt.Point start, Point end) {
         this.graphics.drawLine(
                 start.x,
                 start.y,
@@ -340,11 +369,11 @@ public class API {
     }
 
     //# IMAGE (PART)
-    public void drawImagePart(String fileName, java.awt.Point point, Rectangle part, Anchor anchor) {
+    public void drawImagePart(String fileName, Point point, Rectangle part, Anchor anchor) {
         this.drawImagePart(this.getImage(fileName), point, part, anchor);
     }
 
-    public void drawImagePart(BufferedImage image, java.awt.Point point, Rectangle part, Anchor anchor) {
+    public void drawImagePart(BufferedImage image, Point point, Rectangle part, Anchor anchor) {
         float[] scale = Anchor.transform(anchor);
 
         int offsetX = (int)(part.width  * scale[0]);
@@ -367,7 +396,10 @@ public class API {
     }
 
     //# IMAGE
-    public void drawImage(String fileName, java.awt.Point point, Anchor anchor) {
+    public void drawImage(String fileName, Point point) {
+        this.drawImage(fileName, point, Anchor.TOP_LEFT);
+    }
+    public void drawImage(String fileName, Point point, Anchor anchor) {
         BufferedImage image = this.getImage(fileName);
 
         float[] transform = Anchor.transform(anchor);
@@ -408,8 +440,12 @@ public class API {
         this.drawText(font, text, new Point(x, y), anchor);
     }
 
-    public void drawText(String text, Point point) {
+    public void drawTextCentered(String text, Point point) {
         this.drawText(text, point, Anchor.CENTER);
+    }
+
+    public void drawText(String text, Point point) {
+        this.drawText(text, point, Anchor.TOP_LEFT);
     }
 
     public void drawText(Font font, String text, Point point, Anchor anchor) {
@@ -447,7 +483,7 @@ public class API {
     }
 
     public void drawText(Font font, String text, float x, float y) {
-        this.drawText(font, text, x, y, Anchor.CENTER);
+        this.drawText(font, text, x, y, Anchor.TOP_LEFT);
     }
 
     public void drawText(String text, float x, float y) {
