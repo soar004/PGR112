@@ -1,6 +1,6 @@
 package lectures._18;
 
-import com.mysql.jdbc.Driver;
+import com.mysql.cj.jdbc.Driver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -31,10 +31,19 @@ public class Lecture18 {
             throw new RuntimeException(e);
         }
 
+        //# 2.1. Sjekke om tilkoblingen fungerer
+
+        System.out.println("Tilkoblingen fungerer!");
+
         //# 3. Gjør klar uttrykk som skal kjøres
 
         //# 4. Kjør uttrykket
 
         //# 5. Rydd opp etter oss
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
