@@ -9,7 +9,9 @@ public class WebShop {
                 Product.Type.PHYSICAL
         );
 
-
+        System.out.println(
+                Store.registry.get("Butikkvegen 123").getLocation().address()
+        );
 
         System.out.println(apple.description());
     }
