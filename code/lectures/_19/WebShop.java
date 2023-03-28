@@ -9,10 +9,23 @@ public class WebShop {
                 Product.Type.PHYSICAL
         );
 
-        System.out.println(
-                Store.registry.get("Butikkvegen 123").getLocation().address()
-        );
+        for (Store store : Store.registry.values()) {
+            System.out.println(store.getName());
+        }
 
-        System.out.println(apple.description());
+        Store store = Store.registry.get("Butikkvegen 123");
+
+        store.addCustomer(new Customer(
+                "MarcusAlexander.Dahl@kristiania.no",
+                "Marcus"
+        ));
+
+        if (store.customerExists("MarcusAlexander.Dahl@kristiania.no")) {
+            System.out.println("Customer exists!");
+        }
+        else {
+            System.out.println("Customer does not exist!");
+        }
+
     }
 }
