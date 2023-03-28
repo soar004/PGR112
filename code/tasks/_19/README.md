@@ -146,12 +146,17 @@ Inne i denne main-metoden, skriv kode slik at vi har en instans av `Storage`-kla
 
 Opprett 3-5 ulike produkter, og legg disse produktene til i `Storage`-instansen sin oversikt over produkter og sett antallet til å være mer enn 1.
 
-Lag ikke-statiske metoder i klassene `Inventory` og `Product` som printer ut informasjon om instansen.
+---
+
+## Oppgave 10
+
+Lag ikke-statiske metoder i klassene `Inventory` og `Product` som printer ut informasjon om instansen, henholdvis oversikt over produkter og antallet per produkt, og produktene selv.
+
 Dette kan gjøres ved å overskrive `toString`-metoden eller ved å lage en egen metode som heter for eksempelvis `printInfo` eller noe i den duren.
 
 ---
 
-## Oppgave 10
+## Oppgave 11
 
 I klassen Storage, endre metodene som legger til produkter slik at føgende skjer:
 
