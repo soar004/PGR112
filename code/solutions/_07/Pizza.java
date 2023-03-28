@@ -1,8 +1,10 @@
 package solutions._07;
 
+
 public class Pizza {
     private final int slices;
     private int taken = 0;
+
 
     public Pizza(int slices) {
         this.slices = slices;
