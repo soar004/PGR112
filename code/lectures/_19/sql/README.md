@@ -2,6 +2,8 @@
 
 I Java trenger vi en driver for å kunne snakke med en MySQL-server.
 
+For å laste ned MySQL-server, bruk følgende link: https://dev.mysql.com/downloads/mysql/
+
 For å få tilgang til klassene vi trenger, så trenger vi å laste inn en pakke som heter Connector/J.
 
 ---
