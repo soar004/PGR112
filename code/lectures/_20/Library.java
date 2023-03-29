@@ -1,6 +1,5 @@
 package lectures._20;
 
-import lectures._18.code.TerminalLogin;
 import lectures._18.database.Database;
 
 import java.sql.*;
