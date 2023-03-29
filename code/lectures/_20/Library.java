@@ -1,9 +1,18 @@
 package lectures._20;
 
+import lectures._18.database.Database;
+
 import java.util.HashMap;
 
 public class Library
 {
+    //# Static
+    static final Database database = new Database(
+            "Lecture20",
+            "lecture20",
+            "password20"
+    );
+
     //# Fields
     private final HashMap<Long, Book> books = new HashMap<>();
 
