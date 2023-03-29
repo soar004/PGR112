@@ -9,14 +9,6 @@ public class Lecture20
 
         Library library = new Library();
 
-        try (Connection connection = Library.database.getConnection()) {
-
-            System.out.println("Tilkoblingen fungerer!");
-
-        } catch(SQLException e) {
-            e.printStackTrace();
-        }
-
         Book book1 = new Book(
                 "Navnet på boken",
                 "Forfatteren av boken",
@@ -32,6 +24,8 @@ public class Lecture20
         System.out.println(book1.amountOfPages());
         System.out.println(book1.ISBN());
         System.out.println(book1.rating());
+
+        library.addBook(book1);
 
     }
 }

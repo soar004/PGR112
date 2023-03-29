@@ -67,7 +67,26 @@ public class Library
     //# Methods
     // Create
     public void addBook(Book book) {
+        // query = "INSERT INTO users(username, password) VALUES('admin', 'admin');";
 
+        String query = "INSERT INTO books(isbn, name, author, description, amountOfPages, rating) VALUES(?, ?, ?, ?, ?, ?)";
+
+        try (Connection connection = Library.database.getConnection()) {
+
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            statement.setLong(1, book.ISBN());
+            statement.setString(2, book.name());
+            statement.setString(3, book.author());
+            statement.setString(4, book.description());
+            statement.setInt(5, book.amountOfPages());
+            statement.setInt(6, book.rating());
+
+            statement.execute();
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     // Read
