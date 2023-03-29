@@ -27,5 +27,21 @@ public class Lecture20
 
         library.addBook(book1);
 
+        Book book2 = new Book(
+                "Navnet på bok 2",
+                "Forfatteren av bok 2",
+                "Beskrrivelse av bok 2",
+                321,
+                1273012731263L,
+                6
+        );
+
+        if (library.addBook(book2)) {
+            System.out.println("Bok 2 ble lagt til i databasen!");
+        }
+        else {
+            System.out.println("Bok 2 eksisterer nok i databasen fra før av");
+        }
+
     }
 }

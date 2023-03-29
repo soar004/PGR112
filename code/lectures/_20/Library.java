@@ -3,10 +3,7 @@ package lectures._20;
 import lectures._18.code.TerminalLogin;
 import lectures._18.database.Database;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.HashMap;
 
 public class Library
@@ -45,7 +42,7 @@ public class Library
     private final HashMap<Long, Book> books = new HashMap<>();
 
 
-
+    //# Helper  methods
     public boolean bookExistsInDatabase(Book book) {
         return this.bookExistsInDatabase(book.ISBN());
     }
@@ -66,31 +63,70 @@ public class Library
 
     //# Methods
     // Create
-    public void addBook(Book book) {
+    public boolean addBook(Book book) {
         // query = "INSERT INTO users(username, password) VALUES('admin', 'admin');";
 
-        String query = "INSERT INTO books(isbn, name, author, description, amountOfPages, rating) VALUES(?, ?, ?, ?, ?, ?)";
+        if (!this.bookExistsInDatabase(book)) {
+            String query = "INSERT INTO books(isbn, name, author, description, amountOfPages, rating) VALUES(?, ?, ?, ?, ?, ?)";
 
-        try (Connection connection = Library.database.getConnection()) {
+            try (Connection connection = Library.database.getConnection()) {
 
-            PreparedStatement statement = connection.prepareStatement(query);
+                PreparedStatement statement = connection.prepareStatement(query);
 
-            statement.setLong(1, book.ISBN());
-            statement.setString(2, book.name());
-            statement.setString(3, book.author());
-            statement.setString(4, book.description());
-            statement.setInt(5, book.amountOfPages());
-            statement.setInt(6, book.rating());
+                statement.setLong(1, book.ISBN());
+                statement.setString(2, book.name());
+                statement.setString(3, book.author());
+                statement.setString(4, book.description());
+                statement.setInt(5, book.amountOfPages());
+                statement.setInt(6, book.rating());
 
-            statement.execute();
+                statement.execute();
 
-        } catch(SQLException e) {
-            e.printStackTrace();
+                this.books.put(book.ISBN(), book);
+
+                return true;
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
         }
+
+        return false;
     }
 
     // Read
     public Book getBook(long ISBN) {
+        if (this.books.containsKey(ISBN)) {
+            return this.books.get(ISBN);
+        }
+        else if (this.bookExistsInDatabase(ISBN)) {
+            String query = "SELECT * FROM books WHERE isbn = '%d';".formatted(ISBN);
+
+            try (Connection connection = Library.database.getConnection()) {
+
+                Statement statement = connection.createStatement();
+
+                ResultSet rs = statement.executeQuery(query);
+
+                Book output = new Book(
+                        rs.getString("name"),
+                        rs.getString("description"),
+                        rs.getString("author"),
+                        rs.getInt("amountOfPages"),
+                        rs.getLong("isbn"),
+                        rs.getInt("rating")
+                );
+
+                this.books.put(output.ISBN(), output);
+
+                return output;
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
         return null;
     }
 
