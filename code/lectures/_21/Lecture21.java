@@ -1,14 +1,20 @@
 package lectures._21;
 
 import lectures._21.webshop.Store;
+import lectures._21.webshop.StoreDatabase;
 
 
 public class Lecture21
 {
     public static void main(String[] args) {
+
+        StoreDatabase database = new StoreDatabase();
+
+        /*
+
         Store.Registration registration = new Store.Registration(
                 1,
-                "Nettbutikken I Norge",
+                "Nettbutikken i Norge",
                 918273645L,
                 Store.Type.Digital
         );
@@ -23,6 +29,6 @@ public class Lecture21
         } catch(Exception e) {
             e.printStackTrace();
         }
-
+        */
     }
 }
