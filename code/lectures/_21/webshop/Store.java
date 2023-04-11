@@ -6,6 +6,15 @@ public class Store
 {
     protected final static HashMap<Integer, Store.Registration> registrations = new HashMap<>();
 
+    public static void addRegistration(Store.Registration registration) {
+        if (!Store.registrations.containsValue(registration)) {
+            Store.registrations.put(registration.id(), registration);
+        }
+        else {
+            System.out.printf("The registration for store \"%s\" already exists!", registration.name());
+        }
+    }
+
     //# Fields
     private Store.Registration registration;
     private final Inventory inventory = new Inventory();
@@ -34,21 +43,21 @@ public class Store
         }
     }
 
-    void addCustomer(Customer customer) {
+    public void addCustomer(Customer customer) {
         if (!this.customers.containsValue(customer)) {
             this.customers.put(++this.customerCount, customer);
         }
     }
 
-    void removeCustomer(int customerId) {
+    public void removeCustomer(int customerId) {
         this.customers.remove(customerId);
     }
 
-    boolean productQuantityInStock(Product product, int quantity) {
+    public boolean productQuantityInStock(Product product, int quantity) {
         return quantity <= this.inventory.stock.get(product);
     }
 
-    void buyProduct(int customerId, Product product, int quantity) {
+    public void buyProduct(int customerId, Product product, int quantity) {
         Customer customer = this.customers.get(customerId);
 
         if (this.productQuantityInStock(product, quantity)) {
