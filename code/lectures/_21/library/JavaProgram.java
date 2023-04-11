@@ -15,6 +15,8 @@ public class JavaProgram
                 10
         );
 
-        library.addBook(book);
+        // library.addBook(book);
+
+        library.removeBook(book);
     }
 }

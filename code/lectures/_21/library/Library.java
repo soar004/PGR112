@@ -136,11 +136,27 @@ public class Library
 
     // Delete
     public void removeBook(Book book) {
-
+        this.removeBook(book.ISBN());
     }
 
     public void removeBook(long ISBN) {
+        // Query: "DELETE FROM books WHERE isbn = '?';"
 
+        if (this.bookExistsInDatabase(ISBN)) {
+            String query = "DELETE FROM books WHERE isbn = ?;";
+
+            try (Connection connection = Library.database.getConnection()) {
+
+                PreparedStatement statement = connection.prepareStatement(query);
+
+                statement.setLong(1, ISBN);
+
+                statement.execute();
+
+            } catch(SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 
