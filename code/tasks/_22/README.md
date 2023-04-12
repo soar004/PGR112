@@ -138,4 +138,3 @@ Hint:
 Målet er at spillet spilles "automatisk", det vil si at spillet starter og så vil spillet printe ut hva som skjer underveis, og til slutt da print ut:
 - Spilleren som vant
 - Antall runder det tok
-- 
