@@ -85,9 +85,13 @@ Les om Levenshtein algoritmen for å regne ut "avstanden" mellom to tekst-verdie
 
 ## Del 2: Deck of Cards
 
+> Ta utgangspunkt i klassene `DeckOfCards` og `Card` her:
+> - `code/lectures/_22/cards`
+
 ### Oppgave 1
 
-Opprett en metode som heter `void shuffle()`.
+Opprett en metode som heter:
+- `void shuffle()`.
 
 Denne metoden skal plassere kortene i en tilfeldig rekkefølge.
 
@@ -116,25 +120,30 @@ Hver runde så skal hver spiller ta et kort fra bunken sin og legge disse fram p
 
 Spilleren som legger fram kortet med høyest verdi vinner kortene og plassere disse i en egen bunke.
 
+Når en spiller går tom for kort, _men_ har kort igjen som de har vunnet - så stokkes disse kortene og brukes for å spille videre.
+
 Om kortene som spilles fra hver spiller har lik verdi, oppstår situasjonen "krig":
 - 3 kort legges fjernes fra hver spiller sin bunke og blir en del av utbyttet som kan vinnes
 - Det neste kortet som spilles bestemmer hvem som vinner
 - Om kortene her er like, fortsettes denne prosessen som beskrives til det er en vinner
 - Vinneren får alle kortene involvert i krigen
 
-Spillet fortsetter helt til en av spillerne sitter igjen med alle kortene.
+Spillet fortsetter helt til en av spillerne sitter igjen med alle kortene, altså at den andre spilleren har _ingen_ kort igjen å spille med.
 
 Hint:
 - Følgende klasser med nevnte felter kan brukes som et utgangspunkt:
   - Player
     - ArrayList<Card> card `Kortene spilleren har`
+    - ArrayList<Card> winnings `Kortene spilleren har vunnet`
   - WarGame
     - Player playerOne `Spiller nr 1`
     - Player playerTwo `Spiller nr 2`
-    - int round `Hvilket runde spillet er i` 
+    - int rounds `Hvilket runde spillet er i`
+    - int wars `Antall "store" kriger som har skjedd i løpet av spillet (spillerne spiller kort med lik verdi)`
     - ArrayList<Card> cardsInPlay `De nåværende kortene som er i spill`
     - ArrayList<Card> bounty `Kortene som kan vinnes per runde`
 
-Målet er at spillet spilles "automatisk", det vil si at spillet starter og så vil spillet printe ut hva som skjer underveis, og til slutt da print ut:
+Målet er at spillet spilles "automatisk", det vil si at spillet starter og så vil spillet printe ut hva som skjer underveis, og helt til slutt da printe ut:
 - Spilleren som vant
 - Antall runder det tok
+- Hvor mange kriger som oppstod
