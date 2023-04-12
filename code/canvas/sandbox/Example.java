@@ -8,7 +8,7 @@ import canvas.library.resource.Color;
 public class Example extends Plugin
 {
     public void render(API canvas) {
-        canvas.setColor(Color.RED);
-        canvas.drawText("Kristiania", canvas.getCenterPoint());
+        // canvas.setColor(Color.RED);
+        // canvas.drawText("Kristiania", canvas.getCenterPoint());
     }
 }
