@@ -122,11 +122,40 @@ public class Library
                 return output;
 
             } catch (SQLException e) {
-                e.printStackTrace();
+               e.printStackTrace();
             }
         }
 
         return null;
+    }
+
+    public HashMap<Long, Book> getAllBooks() {
+        HashMap<Long, Book> output = new HashMap<>();
+
+        try (Connection connection = Library.database.getConnection()) {
+
+            Statement statement = connection.createStatement();
+
+            ResultSet results = statement.executeQuery("SELECT * FROM books;");
+
+            while (results.next()) {
+                Book book = new Book(
+                        results.getString("name"),
+                        results.getString("author"),
+                        results.getString("description"),
+                        results.getInt("amountOfPages"),
+                        results.getLong("isbn"),
+                        results.getInt("rating")
+                );
+
+                output.put(book.ISBN(), book);
+            }
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+
+        return output;
     }
 
     // Update

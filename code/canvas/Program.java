@@ -90,6 +90,7 @@ public class Program implements Runnable
                         }
                     }
 
+                    // Convert Windows path to be more "platform independent" for Java
                     folders.add(folder.getPath().replaceAll("\\\\", "/"));
                 }
             }
