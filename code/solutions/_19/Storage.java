@@ -2,10 +2,7 @@ package solutions._19;
 
 import com.mysql.cj.jdbc.Driver;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Storage {
     //# Static
@@ -50,6 +47,23 @@ public class Storage {
     }
 
     //# Methods
+    public boolean productExistsInDatabase(String name) {
+        String query = "SELECT * FROM product WHERE name = ?";
+
+        try {
+            PreparedStatement statement = Storage.connection.prepareStatement(query);
+
+            statement.setString(1, name);
+
+            return statement.executeQuery().next();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
     public void addProduct(String name, double price) {
         this.addProduct(1, name, price);
     }
@@ -64,9 +78,26 @@ public class Storage {
             );
         }
         else {
-            this.inventory.getStock().put(
-                    new Product(this.inventory.getNextId(), name, price), quantity
-            );
+            Product product = new Product(this.inventory.getNextId(), name, price);
+
+            this.inventory.getStock().put(product, quantity);
+
+            if (!this.productExistsInDatabase(name)) {
+                String query = "INSERT INTO product(id, name, price) VALUES(?, ?, ?);";
+
+                try {
+                    PreparedStatement statement = Storage.connection.prepareStatement(query);
+
+                    statement.setInt(1, product.id());
+                    statement.setString(2, product.name());
+                    statement.setDouble(3, product.price());
+
+                    statement.execute();
+
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 
