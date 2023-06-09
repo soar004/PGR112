@@ -7,4 +7,3 @@ Kode du jobber med eller tester ut i forbindelse med en oppgave eller for å utf
 Prøv å hold mappen din strukturert!
 
 Om du lager en mappe som heter "shared/" inne i mappen, så vil denne mappen kunne inneholde kode som kan deles med alle på et senere tidspunkt.
-
