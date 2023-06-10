@@ -58,12 +58,12 @@ Jeg klarer å ...
 - [x] forklare forskjellene på List og Set
 - [x] forklare hva et Map er
 - [x] forklare hvorfor et HashMap kalles for et HashMap (Hint: _Hash_ spesifikt)
-- [ ] opprette en tom Optional
-- [ ] opprette en Optional fra en verdi som aldri er null
-- [ ] opprette en Optional fra en verdi som kan være null
-- [ ] forklare hvorfor vi burde bruke Optional som returtype til en metode
-- [ ] gjenkjenne et _lambda_ uttrykk
-- [ ] skrive et _lambda_ uttrykk og kjør det slik at noe printes ut til terminalen
+- [x] opprette en tom Optional
+- [x] opprette en Optional fra en verdi som aldri er null
+- [x] opprette en Optional fra en verdi som kan være null
+- [x] forklare hvorfor vi burde bruke Optional som returtype til en metode
+- [x] gjenkjenne et _lambda_ uttrykk
+- [x] skrive et _lambda_ uttrykk og kjør det slik at noe printes ut til terminalen
 
 ---
 ---
