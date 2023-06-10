@@ -72,37 +72,37 @@ Jeg klarer å ...
 
 Jeg klarer å ...
 
-- [ ] forklare forskjellen på private og public (tilgangsmodifikatorer)
-- [ ] forklare hva innkapsling innebærer
-- [ ] forklare hva setter- og getter-metoder brukes til
-- [ ] forklare hvorfor bruk av setter-metoder i en konstruktør er anbefalt ovenfor å sette verdiene til feltene direkte
+- [x] forklare forskjellen på private og public (tilgangsmodifikatorer)
+- [x] forklare hva innkapsling innebærer
+- [x] forklare hva setter- og getter-metoder brukes til
+- [x] forklare hvorfor bruk av setter-metoder i en konstruktør er anbefalt ovenfor å sette verdiene til feltene direkte
 - [x] forstå hvorfor å sette alt til å være private først kan være en god strategi
 - [x] opprette en klasse som arver fra en annen klasse
-- [ ] forklare hva aggregering innebærer
-- [ ] lage et eksempel som viser aggregering
+- [x] forklare hva aggregering innebærer
+- [x] lage et eksempel som viser aggregering
 - [x] lage en abstrakt klasse
 - [x] opprette en abstrakt metode som implementeres i en klasse som arver fra en abstrakt klasse med denne abstrakte metoden
-- [ ] opprette et grenesnitt
-- [ ] opprette et grensesnitt som utvider et annet grensesnitt
-- [ ] forklare hva som menes med at en abstrakt klasse er 0 til 100% abstrakt hvor et grensesnitt er 100% abstrakt
+- [x] opprette et grenesnitt
+- [x] opprette et grensesnitt som utvider et annet grensesnitt
+- [x] forklare hva som menes med at en abstrakt klasse er 0 til 100% abstrakt hvor et grensesnitt er 100% abstrakt
 - [x] opprette en klasse som arver fra en abstrakt klasse og lage implementasjoner for abstrakte metoder oppgitt
-- [ ] konvertere en abstrakt klasse som kun har abstrakte offentlige metoder om til et grensesnitt
+- [x] konvertere en abstrakt klasse som kun har abstrakte offentlige metoder om til et grensesnitt
 - [x] opprette en klasse som implementerer et grensesnitt
-- [ ] lage en polymorfisk metode (her trengs det klasse som arver eller implementerer et grensesnitt)
+- [x] lage en polymorfisk metode (her trengs det klasse som arver eller implementerer et grensesnitt)
 - [x] bruke @Override på riktig plass i koden (annotasjon)
-- [ ] overskrive toString() for å lage en egen implementasjon av hvordan et objekt omgjøres til en tekst representasjon
+- [x] overskrive toString() for å lage en egen implementasjon av hvordan et objekt omgjøres til en tekst representasjon
 - [x] beskrive forskjellen på compile-time og runtime
-- [ ] lage et eksempel som viser polymorfisme ved hjelp av å overskrive arvede metoder
-- [ ] lage et eksempel som viser polymorfisme ved hjelp av grensesnitt
-- [ ] lage et grensesnitt som har en _default_ implementasjon for en metode som fortsatt kan overskrives i en klasse
-- [ ] bryte opp en større klasse om til flere klasser og bruke aggregering for opprettholde hva den originale klassen gjorde
-- [ ] forklare hvordan bruk av "static" påvirker minneforbruket til et program, altså hvorfor programmer bruker mindre minne
-- [ ] forklare når det er gunstig å bruke statiske felter i en klasse
-- [ ] lage et eksempel som bruker en statisk kodeblokk
-- [ ] forklare når det er gunstig å bruk en statisk kodeblokk
-- [ ] forklare hvorfor initialisering av statiske felter ikke burde gjøres i en konstruktør
-- [ ] lage et eksempel som viser bruken av _protected_ (tilgangsmodifikator som f.eks. _public_ og _private_) i forbindelse med arv
-- [ ] forklare hvordan _protected_ kan brukes i forbindelse med arv (inheritance)
+- [x] lage et eksempel som viser polymorfisme ved hjelp av å overskrive arvede metoder
+- [x] lage et eksempel som viser polymorfisme ved hjelp av grensesnitt
+- [x] lage et grensesnitt som har en _default_ implementasjon for en metode som fortsatt kan overskrives i en klasse
+- [x] bryte opp en større klasse om til flere klasser og bruke aggregering for opprettholde hva den originale klassen gjorde
+- [x] forklare hvordan bruk av "static" påvirker minneforbruket til et program, altså hvorfor programmer bruker mindre minne
+- [x] forklare når det er gunstig å bruke statiske felter i en klasse
+- [x] lage et eksempel som bruker en statisk kodeblokk
+- [x] forklare når det er gunstig å bruk en statisk kodeblokk
+- [x] forklare hvorfor initialisering av statiske felter ikke burde gjøres i en konstruktør
+- [x] lage et eksempel som viser bruken av _protected_ (tilgangsmodifikator som f.eks. _public_ og _private_) i forbindelse med arv
+- [x] forklare hvordan _protected_ kan brukes i forbindelse med arv (inheritance)
 
 ---
 ---
@@ -178,6 +178,6 @@ Jeg klarer å ...
 ---
 
 Brukernavn: `soar004`
-Sist endret: `2023-06-09`
+Sist endret: `2023-06-10`
 
 ---
