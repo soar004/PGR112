@@ -133,15 +133,15 @@ Jeg klarer å ...
 - [x] logge inn som root for å administrere følgende inne på serveren:
   - [x] opprette databaser til ulike prosjekter, programmer eller applikasjoner
   - [x] opprette brukere som kun har tilgang til databasen de har tilgang til
-  - [xd] undersøke når det trengs å kjøre `FLUSH PRIVILEGES;` på serveren etter brukere har blitt manipulert eller fjernet
+  - [x] undersøke når det trengs å kjøre `FLUSH PRIVILEGES;` på serveren etter brukere har blitt manipulert eller fjernet
 
 #### [når programmeringen settes i gang]
 
-- [ ] registrere type database og koble til database via klassen `Driver` fra pakken `com.mysql.cj.jdbc`
-- [ ] hente en tilkobling til databasen og kjøre et SQL-uttrykk for å hente ut data fra en tabell
-- [ ] hente ut alle radene fra en tabell og printe verdiene ut til terminalen (+ på en strukturert måte)
-- [ ] bruke `execute()` og `executeQuery()`
-- [ ] lage hjelpe-metoder som gjør det smidigere å kommunisere data med en database
+- [x] registrere type database og koble til database via klassen `Driver` fra pakken `com.mysql.cj.jdbc`
+- [x] hente en tilkobling til databasen og kjøre et SQL-uttrykk for å hente ut data fra en tabell
+- [x] hente ut alle radene fra en tabell og printe verdiene ut til terminalen (+ på en strukturert måte)
+- [x] bruke `execute()` og `executeQuery()`
+- [x] lage hjelpe-metoder som gjør det smidigere å kommunisere data med en database
 - 
 ##### Utfordringer
 - [ ] lagre nok informasjon om et ArrayList i en database slik at du kan gjenopprette en instans av ArrayList som er akkurat slik som det var før
