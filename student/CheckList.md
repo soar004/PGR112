@@ -127,13 +127,13 @@ Jeg klarer å ...
 
 ### [før programmering skjer]
 - [x] installere MySQL database og koble til via GUI eller terminal (brukernavn/passord)
-- [ ] kjøre og forklare følgende SQL-uttrykk: `SHOW DATABASES`, `USE` og `SHOW TABLES` hver for seg etterfulgt av `;` 
+- [x] kjøre og forklare følgende SQL-uttrykk: `SHOW DATABASES`, `USE` og `SHOW TABLES` hver for seg etterfulgt av `;` 
 - [x] installere Connector/J (plattform-uavhengig fil) i et eget prosjekt (via prosjekt-innstillinger)
-- [ ] forsikre meg om at jeg ikke bruker "root" som en bruker via programmets kode
-- [ ] logge inn som root for å administrere følgende inne på serveren:
-  - [ ] opprette databaser til ulike prosjekter, programmer eller applikasjoner
-  - [ ] opprette brukere som kun har tilgang til databasen de har tilgang til
-  - [ ] undersøke når det trengs å kjøre `FLUSH PRIVILEGES;` på serveren etter brukere har blitt manipulert eller fjernet
+- [x] forsikre meg om at jeg ikke bruker "root" som en bruker via programmets kode
+- [x] logge inn som root for å administrere følgende inne på serveren:
+  - [x] opprette databaser til ulike prosjekter, programmer eller applikasjoner
+  - [x] opprette brukere som kun har tilgang til databasen de har tilgang til
+  - [xd] undersøke når det trengs å kjøre `FLUSH PRIVILEGES;` på serveren etter brukere har blitt manipulert eller fjernet
 
 #### [når programmeringen settes i gang]
 
